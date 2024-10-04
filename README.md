@@ -34,6 +34,11 @@ RA:
 
 ------------------------------------------------
 
+Gabriel Lemos Guerra de Almeida
+Curso: Sistemas de informação
+RA: 1072322350
+
+------------------------------------------------
 ```
 ## 🔎 Funcionalidades
 - [x] Cadastro de produtos e categorias
