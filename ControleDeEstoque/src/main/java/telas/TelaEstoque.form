@@ -203,6 +203,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="MEU ESTOQUE"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblAbrirEstoqueMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblAbrirMovimentacoes">
       <Properties>
@@ -236,6 +239,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="PRODUTOS"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblAbrirProdutosMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>

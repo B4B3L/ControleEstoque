@@ -83,6 +83,11 @@ public class TelaEstoque extends javax.swing.JFrame {
         lblAbrirEstoque.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAbrirEstoque.setForeground(new java.awt.Color(0, 0, 153));
         lblAbrirEstoque.setText("MEU ESTOQUE");
+        lblAbrirEstoque.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirEstoqueMouseClicked(evt);
+            }
+        });
 
         lblAbrirMovimentacoes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAbrirMovimentacoes.setForeground(new java.awt.Color(0, 0, 153));
@@ -95,6 +100,19 @@ public class TelaEstoque extends javax.swing.JFrame {
         lblAbrirProdutos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAbrirProdutos.setForeground(new java.awt.Color(0, 0, 153));
         lblAbrirProdutos.setText("PRODUTOS");
+        lblAbrirProdutos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirProdutosMouseClicked(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 153));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButton1.setBorderPainted(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton1.setFocusable(false);
+        jButton1.setSelected(true);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
@@ -268,6 +286,14 @@ public class TelaEstoque extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblAbrirProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirProdutosMouseClicked
+     new TelaProdutos().setVisible(true);
+    }//GEN-LAST:event_lblAbrirProdutosMouseClicked
+
+    private void lblAbrirEstoqueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirEstoqueMouseClicked
+     new TelaEstoque().setVisible(true);
+    }//GEN-LAST:event_lblAbrirEstoqueMouseClicked
     private void formWindowOpened(java.awt.event.WindowEvent evt) {                                  
         ImageIcon icon = new ImageIcon("src/main/java/imagens/lupa.png");
         icon.setImage(icon.getImage().getScaledInstance(lblLupa.getWidth(), lblLupa.getHeight(), 1));
