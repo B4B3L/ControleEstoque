@@ -333,3 +333,4 @@ public class TelaProdutos extends javax.swing.JFrame {
     private javax.swing.JLabel lblImprimir;
     private javax.swing.JLabel lblLupa;
     // End of variables declaration//GEN-END:variables
+}
