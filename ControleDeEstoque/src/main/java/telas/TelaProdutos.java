@@ -4,6 +4,9 @@
  */
 package telas;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author USER
@@ -15,6 +18,7 @@ public class TelaProdutos extends javax.swing.JFrame {
      */
     public TelaProdutos() {
         initComponents();
+        getContentPane().setBackground(Color.WHITE);
     }
 
     /**
@@ -26,21 +30,152 @@ public class TelaProdutos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        lblAbrirEstoque = new javax.swing.JLabel();
+        lblAbrirProdutos = new javax.swing.JLabel();
+        lblAbrirCategorias = new javax.swing.JLabel();
+        lblAbrirMovimentacoes = new javax.swing.JLabel();
+        lblEstoque = new javax.swing.JLabel();
+        lbl2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        lblLupa = new javax.swing.JLabel();
+        lblImprimir = new javax.swing.JLabel();
+
+        setAutoRequestFocus(false);
+        setFocusable(false);
+        setFocusableWindowState(false);
+        setResizable(false);
+        setType(java.awt.Window.Type.UTILITY);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
+
+        lblAbrirEstoque.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAbrirEstoque.setForeground(new java.awt.Color(0, 0, 153));
+        lblAbrirEstoque.setText("MEU ESTOQUE");
+        lblAbrirEstoque.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirEstoqueMouseClicked(evt);
+            }
+        });
+
+        lblAbrirProdutos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAbrirProdutos.setForeground(new java.awt.Color(0, 0, 153));
+        lblAbrirProdutos.setText("PRODUTOS");
+        lblAbrirProdutos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirProdutosMouseClicked(evt);
+            }
+        });
+
+        lblAbrirCategorias.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAbrirCategorias.setForeground(new java.awt.Color(0, 0, 153));
+        lblAbrirCategorias.setText("CATEGORIAS");
+
+        lblAbrirMovimentacoes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAbrirMovimentacoes.setForeground(new java.awt.Color(0, 0, 153));
+        lblAbrirMovimentacoes.setText("MOVIMENTAÇÕES");
+
+        lbl2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbl2.setForeground(new java.awt.Color(0, 0, 153));
+        lbl2.setText("PRODUTOS");
+        lbl2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl2MouseClicked(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 153));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButton1.setBorderPainted(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton1.setFocusable(false);
+        jButton1.setSelected(true);
+
+        lblLupa.setText("jLabel15");
+
+        lblImprimir.setText("jLabel15");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(lblEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblAbrirEstoque)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 280, Short.MAX_VALUE)
+                .addComponent(lblAbrirProdutos)
+                .addGap(100, 100, 100)
+                .addComponent(lblAbrirCategorias)
+                .addGap(99, 99, 99)
+                .addComponent(lblAbrirMovimentacoes)
+                .addGap(24, 24, 24))
+            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(lbl2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblLupa, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAbrirEstoque)
+                    .addComponent(lblAbrirMovimentacoes)
+                    .addComponent(lblAbrirCategorias)
+                    .addComponent(lblAbrirProdutos)
+                    .addComponent(lblEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(lbl2)
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblLupa, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(294, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblAbrirEstoqueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirEstoqueMouseClicked
+        new TelaEstoque().setVisible(true);
+    }//GEN-LAST:event_lblAbrirEstoqueMouseClicked
+
+    private void lblAbrirProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirProdutosMouseClicked
+        new TelaProdutos().setVisible(true);
+    }//GEN-LAST:event_lblAbrirProdutosMouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        ImageIcon icon = new ImageIcon("src/main/java/imagens/lupa.png");
+        icon.setImage(icon.getImage().getScaledInstance(lblLupa.getWidth(), lblLupa.getHeight(), 1));
+        lblLupa.setIcon(icon);
+        
+        ImageIcon icon1 = new ImageIcon("src/main/java/imagens/imprimir.png");
+        icon1.setImage(icon1.getImage().getScaledInstance(lblImprimir.getWidth(), lblImprimir.getHeight(), 1));
+        lblImprimir.setIcon(icon1);
+        
+        ImageIcon iconEstoque = new ImageIcon("src/main/java/imagens/estoque.png");
+        iconEstoque.setImage(iconEstoque.getImage().getScaledInstance(lblEstoque.getWidth(), lblEstoque.getHeight(), 1));
+        lblEstoque.setIcon(iconEstoque);
+    }//GEN-LAST:event_formWindowOpened
+
+    private void lbl2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +213,14 @@ public class TelaProdutos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lblAbrirCategorias;
+    private javax.swing.JLabel lblAbrirEstoque;
+    private javax.swing.JLabel lblAbrirMovimentacoes;
+    private javax.swing.JLabel lblAbrirProdutos;
+    private javax.swing.JLabel lblEstoque;
+    private javax.swing.JLabel lblImprimir;
+    private javax.swing.JLabel lblLupa;
     // End of variables declaration//GEN-END:variables
 }
