@@ -4,6 +4,9 @@
  */
 package telas;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author USER
@@ -15,6 +18,7 @@ public class TelaCategorias extends javax.swing.JFrame {
      */
     public TelaCategorias() {
         initComponents();
+        getContentPane().setBackground(Color.WHITE);
     }
 
     /**
@@ -26,21 +30,275 @@ public class TelaCategorias extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        lblEstoque = new javax.swing.JLabel();
+        lblAbrirEstoque = new javax.swing.JLabel();
+        lblAbrirProdutos = new javax.swing.JLabel();
+        lblAbrirCategorias = new javax.swing.JLabel();
+        lblAbrirMovimentacoes = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        lbl2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        lblLupa = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        lblImprimir = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelaCategorias = new javax.swing.JTable();
+        lblfechar = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Categorias");
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(948, 517));
+        setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
+
+        lblAbrirEstoque.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAbrirEstoque.setForeground(new java.awt.Color(0, 0, 153));
+        lblAbrirEstoque.setText("MEU ESTOQUE");
+        lblAbrirEstoque.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirEstoqueMouseClicked(evt);
+            }
+        });
+
+        lblAbrirProdutos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAbrirProdutos.setForeground(new java.awt.Color(0, 0, 153));
+        lblAbrirProdutos.setText("PRODUTOS");
+        lblAbrirProdutos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirProdutosMouseClicked(evt);
+            }
+        });
+
+        lblAbrirCategorias.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAbrirCategorias.setForeground(new java.awt.Color(0, 0, 153));
+        lblAbrirCategorias.setText("CATEGORIAS");
+        lblAbrirCategorias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirCategoriasMouseClicked(evt);
+            }
+        });
+
+        lblAbrirMovimentacoes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAbrirMovimentacoes.setForeground(new java.awt.Color(0, 0, 153));
+        lblAbrirMovimentacoes.setText("MOVIMENTAÇÕES");
+        lblAbrirMovimentacoes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirMovimentacoesMouseClicked(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 153));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButton1.setBorderPainted(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton1.setFocusable(false);
+        jButton1.setSelected(true);
+
+        lbl2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbl2.setForeground(new java.awt.Color(0, 0, 153));
+        lbl2.setText("CATEGORIAS");
+
+        jLabel1.setText("ID da categoria");
+
+        jLabel2.setText("Nome");
+
+        jLabel3.setText("Descrição");
+
+        jLabel4.setText("Ref - Baixo Estoque");
+
+        lblLupa.setText("jLabel15");
+
+        jButton2.setBackground(new java.awt.Color(0, 0, 153));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("+ CATEGORIAS");
+        jButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        lblImprimir.setText("jLabel15");
+
+        tabelaCategorias.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tabelaCategorias);
+        tabelaCategorias.setTableHeader(null);
+
+        lblfechar.setText("jLabel6");
+        lblfechar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblfecharMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(lblEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblAbrirEstoque)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
+                .addComponent(lblAbrirProdutos)
+                .addGap(100, 100, 100)
+                .addComponent(lblAbrirCategorias)
+                .addGap(49, 49, 49)
+                .addComponent(lblAbrirMovimentacoes)
+                .addGap(32, 32, 32)
+                .addComponent(lblfechar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
+            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbl2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTextField1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jTextField3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4))))
+                        .addGap(18, 18, 18)
+                        .addComponent(lblLupa, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAbrirEstoque)
+                    .addComponent(lblAbrirMovimentacoes)
+                    .addComponent(lblAbrirCategorias)
+                    .addComponent(lblAbrirProdutos)
+                    .addComponent(lblEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblfechar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(lbl2)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblLupa, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblAbrirEstoqueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirEstoqueMouseClicked
+        new TelaEstoque().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAbrirEstoqueMouseClicked
+
+    private void lblAbrirProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirProdutosMouseClicked
+        new TelaProdutos().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAbrirProdutosMouseClicked
+
+    private void lblAbrirCategoriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirCategoriasMouseClicked
+        new TelaCategorias().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAbrirCategoriasMouseClicked
+
+    private void lblAbrirMovimentacoesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirMovimentacoesMouseClicked
+        new TelaMovimentacoes().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAbrirMovimentacoesMouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        ImageIcon icon = new ImageIcon("src/main/java/imagens/lupa.png");
+        icon.setImage(icon.getImage().getScaledInstance(lblLupa.getWidth(), lblLupa.getHeight(), 1));
+        lblLupa.setIcon(icon);
+        
+        ImageIcon icon1 = new ImageIcon("src/main/java/imagens/imprimir.png");
+        icon1.setImage(icon1.getImage().getScaledInstance(lblImprimir.getWidth(), lblImprimir.getHeight(), 1));
+        lblImprimir.setIcon(icon1);
+        
+        ImageIcon iconEstoque = new ImageIcon("src/main/java/imagens/estoque.png");
+        iconEstoque.setImage(iconEstoque.getImage().getScaledInstance(lblEstoque.getWidth(), lblEstoque.getHeight(), 1));
+        lblEstoque.setIcon(iconEstoque);
+        
+        ImageIcon iconFechar = new ImageIcon("src/main/java/imagens/fechar.png");
+        iconFechar.setImage(iconFechar.getImage().getScaledInstance(lblfechar.getWidth(), lblfechar.getHeight(), 1));
+        lblfechar.setIcon(iconFechar);
+    }//GEN-LAST:event_formWindowOpened
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void lblfecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblfecharMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_lblfecharMouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +336,26 @@ public class TelaCategorias extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lblAbrirCategorias;
+    private javax.swing.JLabel lblAbrirEstoque;
+    private javax.swing.JLabel lblAbrirMovimentacoes;
+    private javax.swing.JLabel lblAbrirProdutos;
+    private javax.swing.JLabel lblEstoque;
+    private javax.swing.JLabel lblImprimir;
+    private javax.swing.JLabel lblLupa;
+    private javax.swing.JLabel lblfechar;
+    private javax.swing.JTable tabelaCategorias;
     // End of variables declaration//GEN-END:variables
 }

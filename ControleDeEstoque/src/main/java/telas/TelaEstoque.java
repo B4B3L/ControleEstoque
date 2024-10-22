@@ -63,6 +63,7 @@ public class TelaEstoque extends javax.swing.JFrame {
         lblLupa = new javax.swing.JLabel();
         lblImprimir = new javax.swing.JLabel();
         lblEstoque = new javax.swing.JLabel();
+        lblfechar = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,7 +88,7 @@ public class TelaEstoque extends javax.swing.JFrame {
         setFocusable(false);
         setFocusableWindowState(false);
         setForeground(java.awt.Color.white);
-        setResizable(false);
+        setUndecorated(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -97,14 +98,29 @@ public class TelaEstoque extends javax.swing.JFrame {
         lblAbrirEstoque.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAbrirEstoque.setForeground(new java.awt.Color(0, 0, 153));
         lblAbrirEstoque.setText("MEU ESTOQUE");
+        lblAbrirEstoque.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirEstoqueMouseClicked(evt);
+            }
+        });
 
         lblAbrirMovimentacoes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAbrirMovimentacoes.setForeground(new java.awt.Color(0, 0, 153));
         lblAbrirMovimentacoes.setText("MOVIMENTAÇÕES");
+        lblAbrirMovimentacoes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirMovimentacoesMouseClicked(evt);
+            }
+        });
 
         lblAbrirCategorias.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAbrirCategorias.setForeground(new java.awt.Color(0, 0, 153));
         lblAbrirCategorias.setText("CATEGORIAS");
+        lblAbrirCategorias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAbrirCategoriasMouseClicked(evt);
+            }
+        });
 
         lblAbrirProduto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAbrirProduto.setForeground(new java.awt.Color(0, 0, 153));
@@ -168,7 +184,7 @@ public class TelaEstoque extends javax.swing.JFrame {
         TabelaEstoque.setFocusable(false);
         TabelaEstoque.getTableHeader().setResizingAllowed(false);
         TabelaEstoque.getTableHeader().setReorderingAllowed(false);
-        jScrollPane2.setColumnHeader(null);
+        TabelaEstoque.setTableHeader(null);
         jScrollPane2.setViewportView(TabelaEstoque);
         if (TabelaEstoque.getColumnModel().getColumnCount() > 0) {
             TabelaEstoque.getColumnModel().getColumn(0).setResizable(false);
@@ -185,20 +201,43 @@ public class TelaEstoque extends javax.swing.JFrame {
 
         lblImprimir.setText("jLabel15");
 
+        lblfechar.setText("jLabel6");
+        lblfechar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblfecharMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(lblEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblAbrirEstoque)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblAbrirProduto)
+                .addGap(100, 100, 100)
+                .addComponent(lblAbrirCategorias)
+                .addGap(29, 29, 29)
+                .addComponent(lblAbrirMovimentacoes)
+                .addGap(18, 18, 18)
+                .addComponent(lblfechar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
+            .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 808, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(14, 14, 14))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 808, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -241,19 +280,7 @@ public class TelaEstoque extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(lblImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(jLabel1))
-                        .addContainerGap(31, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(lblEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblAbrirEstoque)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblAbrirProduto)
-                .addGap(100, 100, 100)
-                .addComponent(lblAbrirCategorias)
-                .addGap(76, 76, 76)
-                .addComponent(lblAbrirMovimentacoes)
-                .addGap(23, 23, 23))
+                        .addContainerGap(39, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,13 +292,14 @@ public class TelaEstoque extends javax.swing.JFrame {
                         .addComponent(lblAbrirMovimentacoes)
                         .addComponent(lblAbrirCategorias)
                         .addComponent(lblAbrirProduto))
-                    .addComponent(lblEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblfechar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -294,9 +322,9 @@ public class TelaEstoque extends javax.swing.JFrame {
                     .addComponent(txtPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblLupa, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77))
+                .addGap(87, 87, 87))
         );
 
         pack();
@@ -306,7 +334,27 @@ public class TelaEstoque extends javax.swing.JFrame {
     private void lblAbrirProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirProdutoMouseClicked
         // TODO add your handling code here:
         new TelaProdutos().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_lblAbrirProdutoMouseClicked
+
+    private void lblAbrirEstoqueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirEstoqueMouseClicked
+        new TelaEstoque().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAbrirEstoqueMouseClicked
+
+    private void lblAbrirCategoriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirCategoriasMouseClicked
+        new TelaCategorias().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAbrirCategoriasMouseClicked
+
+    private void lblAbrirMovimentacoesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAbrirMovimentacoesMouseClicked
+        new TelaMovimentacoes().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAbrirMovimentacoesMouseClicked
+
+    private void lblfecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblfecharMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_lblfecharMouseClicked
  
     private void formWindowOpened(java.awt.event.WindowEvent evt) {                                  
         ImageIcon icon = new ImageIcon("src/main/java/imagens/lupa.png");
@@ -320,6 +368,10 @@ public class TelaEstoque extends javax.swing.JFrame {
         ImageIcon iconEstoque = new ImageIcon("src/main/java/imagens/estoque.png");
         iconEstoque.setImage(iconEstoque.getImage().getScaledInstance(lblEstoque.getWidth(), lblEstoque.getHeight(), 1));
         lblEstoque.setIcon(iconEstoque);
+        
+        ImageIcon iconFechar = new ImageIcon("src/main/java/imagens/fechar.png");
+        iconFechar.setImage(iconFechar.getImage().getScaledInstance(lblfechar.getWidth(), lblfechar.getHeight(), 1));
+        lblfechar.setIcon(iconFechar);
     }
     /**
      * @param args the command line arguments
@@ -373,6 +425,7 @@ public class TelaEstoque extends javax.swing.JFrame {
     private javax.swing.JLabel lblEstoque;
     private javax.swing.JLabel lblImprimir;
     private javax.swing.JLabel lblLupa;
+    private javax.swing.JLabel lblfechar;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
     private java.awt.MenuBar menuBar1;
